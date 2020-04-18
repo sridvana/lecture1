@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple headlines css</title>
+        <style>
+            h1, h2 {
+                color: red;
+            }
+            ol li {
+                color:red;
+            }
+            ul > li {
+                color:blue;
+            }
+            input[type=text] {
+                background-color:lightblue;
+            }
+            input[type=number] {
+                background-color:lightgreen;
+            }
+            button {
+                width: 200px;
+                height: 50px;
+                font-size: 24px;
+                background-color: lightcyan;
+            }
+            button:hover {
+                background-color: lightpink;
+            }
+            a::before {
+                content: "\21d2 click here: ";
+                font-weight: bold;
+                color:limegreen;
+            }
+            p::selection {
+                color:green;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Heading 1 headline, ofcourse bigger than h2</h1>
+        <h2>Heading 2 headline, ofcourse smaller than h1</h2>
+        <h3>Below - Any list inside ol or ul or the first child styling</h3>
+        <ol>
+            <li>list item one</li>
+            <li>list item two</li>
+            <li>list item three</li>
+            <ul>
+                <li>sublist item one</li>
+                <li>sublsit item two</li>
+            </ul>
+            <li>list item four</li>
+        </ol>
+        <ul>
+            <li>list item outside first ol</li>
+            <li>list item outside first ol</li>
+            <ol>
+                <li>Ordered list item 1 within unordered list</li>
+                <li>Ordered list item 1 within unordered list</li>
+            </ol>
+        </ul>
+        <form>
+            <h3>CSS type selector</h3>
+            <input name="name" type="text" placeholder="Name">
+            <input type="number" name="age" placeholder="Age">
+        </form>
+        <h3>Hover and check</h2>
+        <button>Click me!</button>
+        <h3>CSS before</h3>
+        <ul>
+            <li><a href="#">One link</a></li>
+            <li><a href="#">Another link</a></li>
+        </ul>
+        <h3>CSS selection</h3>
+        <p>Lorem ipsum dolor. Sed et tortor mattis, maximus leo at, molestie elit. Vivamus varius libero ante, malesuada lacinia tellus ornare nec. Nunc malesuada molestie ante, egestas sodales velit porttitor in. Integer placerat maximus mattis. Morbi pulvinar nisl quam, dapibus ultricies est tincidunt id. Praesent efficitur turpis mauris, tempor efficitur odio maximus et. </p>
+    </body>
+</html>
