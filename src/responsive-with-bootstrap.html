@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resonsive design examples</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <style>
+            .row > div {
+                padding: 20px;
+                background-color: teal;
+                border: 2px solid black;
+            }
+            .container {
+                margin-top: 24px;
+            }
+            @media print {
+                .screen-only {
+                    display: none;
+                }
+            }
+            @media (min-width: 640px) {
+                body {
+                    background-color: lightblue;
+                }
+                h1::before {
+                    content: "Welcome to my web page, "
+                }
+            }
+            @media (max-width: 510px) {
+                body {
+                    background-color: lightpink;
+                }
+                h1::before {
+                    content: "Welcome to my mobile web page, "
+                }
+                .container > div {
+                    color: blue;
+                }
+            }
+            .container-no-bs {
+                display:flex;
+                flex-wrap: wrap;
+            }
+            .container-no-bs > div {
+                background-color: springgreen;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+            .grid-example {
+                display: grid;
+                background-color: blue;
+                padding: 20px;
+                grid-column-gap: 10px;
+                grid-template-columns: auto 200px auto;
+                grid-row-gap: 10px
+            }
+            .grid-example-item {
+                background-color: white;
+                font-size: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Duvista</h1>
+        <p>this is the first paragraph</p>
+        <p>this is second paragraph</p>
+        <p class="screen-only">this is third paragraph that will not be shown when printed</p>
+        <div class="container-no-bs">
+            <div>A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>B Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>C Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>D Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>E Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>F Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>G Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>H Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>I Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>J Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>K Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+            <div>L Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id fermentum elit. Aenean ornare porta sagittis.</div>
+        </div>
+        <div class="grid-example">
+            <div class="grid-example-item">1</div>
+            <div class="grid-example-item">2</div>
+            <div class="grid-example-item">3</div>
+            <div class="grid-example-item">4</div>
+            <div class="grid-example-item">5</div>
+            <div class="grid-example-item">6</div>
+            <div class="grid-example-item">7</div>
+            <div class="grid-example-item">9</div>
+            <div class="grid-example-item">10</div>
+            <div class="grid-example-item">11</div>
+            <div class="grid-example-item">12</div>
+        </div>
+        <h2>Column widths reducing based on viewport but not responsive</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    This is a section.
+                </div>
+                <div class="col-3">
+                    This is another section.
+                </div>
+                <div class="col-3">
+                    This is a third section.
+                </div>
+                <div class="col-3">
+                    This is a fourth section.
+                </div>
+            </div>
+        </div>
+        <h2>Column widths reducing based on viewport but responsive</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    This is a section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is another section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is a third section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is a fourth section.
+                </div>
+            </div>
+        </div>
+        <h3>Another example with Alerts</h3>
+        <div>
+            <div class="alert alert-primary" role="alert">
+                This is an alert message. News!
+            </div>
+            <div class="alert alert-success" role="alert">
+                This is an alert message. Good News!
+            </div>
+            <div class="alert alert-danger" role="alert">
+                This is an alert message. Bad News!
+            </div>
+        </div>
+    </body>
+</html>
